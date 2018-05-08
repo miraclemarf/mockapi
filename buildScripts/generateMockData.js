@@ -5,13 +5,13 @@
  */
 
 var jsf = require('json-schema-faker');
-//var mockDataSchema = require('./mockDataMaritimax');
-var mockDataSchema = require('./mockDataBolalobTv');
+var mockDataSchema = require('./mockDataMaritimax');
+//var mockDataSchema = require('./mockDataBolalobTv');
 var fs = require('fs');
 
 var json = JSON.stringify(jsf(mockDataSchema));
 
-fs.writeFile("./src/api/db.json", json, function(err) {
+fs.writeFile("./src/api/db.json", json, function (err) {
   if (err) {
     return console.log(err);
   } else {
